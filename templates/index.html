@@ -1,0 +1,55 @@
+{% include 'header.html' %}
+
+<body>
+
+<div class="main-page-body">
+    <h1>Dominant color extraction</h1>
+    <div class="col-md-6 col-12">
+        {% if file_url %}
+        <div id="content" style="width: 600px;">
+        <div id="colors" align="left">
+            <table>
+                <thead>
+                <th style="background-color: {{ palette_list[0] }}; height: 100px; width: 200px;"></th>
+                <th style="background-color: {{ palette_list[1] }};height: 100px; width: 200px;"></th>
+                <th style="background-color: {{ palette_list[2] }};height: 100px; width: 200px;"></th>
+                <th style="background-color: {{ palette_list[3] }};height: 100px; width: 200px;"></th>
+                <th style="background-color: {{ palette_list[4] }};height: 100px; width: 200px;"></th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{ palette_list[0] }}</td>
+                    <td>{{ palette_list[1] }}</td>
+                    <td>{{ palette_list[2] }}</td>
+                    <td>{{ palette_list[3] }}</td>
+                    <td>{{ palette_list[4] }}</td>
+                </tr>
+                </tbody>
+            </table>
+    </div>
+        <div class="col-lg-6 col-m-6" style="width: 200px;">
+            <img src="{{ file_url }}">
+        </div>
+            {% else %}
+
+            <form method="post" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+
+                {% for error in form.photo.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        {{ form.photo(class='form-control') }}
+                    </div>
+                    <div class="col-auto">
+                        {{ form.submit(class="btn btn-success") }}
+                    </div>
+                </div>
+            </form>
+
+    </div>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,50 @@
+body {
+  font-size: 20px;
+  color: 'black';
+  background-color: #F9F5EB;
+  font-family: 'Lora', 'Times New Roman', serif;
+}
+
+home-page-label{
+    font-size: 20px;
+    margin-left: 25px;
+}
+
+h1{
+    font-size: 70px;
+    margin-left: 25px;
+    color: black;
+}
+
+main-page-body{
+    background-color: #4D4D4D;
+}
+
+#mainNAV{
+    font-size: 30px;
+    color: black;
+    background-color: #ECE8DD;
+
+}
+
+#content {
+                width:auto;
+                font: 0.7em "bitstream vera sans", verdana, sans-serif;
+                text-align: justify;
+                padding: 10px;
+                border-top: none;
+                border-left: none;
+                z-index: 2;
+                display: table;
+            }
+            #colors{
+                display: table-cell;
+                margin-right: 10px;
+            }
+
+img {
+margin-left: 250px;
+    width: 230%; /* or any custom size */
+    height: 230%;
+    object-fit: contain;
+}
