@@ -1,16 +1,15 @@
 {% include 'header.html' %}
 
-<body>
 
 <div class="main-page-body">
-    <h1>Dominant color extraction</h1>
+    <h1 style="text-align:center; margin-bottom:20px;">Dominant color extraction</h1>
     <div class="col-md-6 col-12">
         {% if file_url %}
-        <div id="content" style="width: 600px;">
-        <div id="colors" align="left">
+        <div id="content" style="width: 600px; text-align:center;">
+        <div id="colors" align="center">
             <table>
-                <thead>
-                <th style="background-color: {{ palette_list[0] }}; height: 100px; width: 200px;"></th>
+                <thead >
+                <th style="background-color: {{ palette_list[0] }}; height: 100px; width: 200px; "></th>
                 <th style="background-color: {{ palette_list[1] }};height: 100px; width: 200px;"></th>
                 <th style="background-color: {{ palette_list[2] }};height: 100px; width: 200px;"></th>
                 <th style="background-color: {{ palette_list[3] }};height: 100px; width: 200px;"></th>
@@ -28,11 +27,11 @@
             </table>
     </div>
         <div class="col-lg-6 col-m-6" style="width: 200px;">
-            <img src="{{ file_url }}">
+            <img style="max-width: 650px; max-height: 650px;margin-left: 300px" src="{{ file_url }}">
         </div>
             {% else %}
 
-            <form method="post" enctype="multipart/form-data">
+            <form style='margin-left:200px;'method="post" enctype="multipart/form-data">
                 {{ form.hidden_tag() }}
 
                 {% for error in form.photo.errors %}
@@ -51,5 +50,4 @@
 
     </div>
     {% endif %}
-</body>
-</html>
+
